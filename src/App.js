@@ -1,5 +1,6 @@
 import './App.css';
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 
 
 // lets declare global js variable
@@ -14,6 +15,10 @@ function App() {
   return (
       <>
           <Navbar title="TextWeb" about="Aboutus"/>
+          {/*my-3 is a class which gives margin along y of 3*/}
+          <div className="container my-3">
+          <TextForm heading="Enter Your text to analyze"/>
+          </div>
       </>
   );
 }
