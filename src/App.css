@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: snow;
+}
+h2 {
+  font-family: "Arial Rounded MT Bold";
+}
+nav {
+  background-color: black;
+}
+
+.nav-link {
+  color: white;
+}
+.nav-items {
+  color: white;
+}
+
+

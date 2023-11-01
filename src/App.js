@@ -14,7 +14,7 @@ function App() {
   // Everything inside {} curvy brackets is seen/resolved as js inside function component
   return (
       <>
-          <Navbar title="TextWeb" about="Aboutus"/>
+          <Navbar title="TextDecoder" about="Aboutus"/>
           {/*my-3 is a class which gives margin along y of 3*/}
           <div className="container my-3">
           <TextForm heading="Enter Your text to analyze"/>
