@@ -1,0 +1,11 @@
+  // Important pts for app.js file -
+  // everything inside the return of this function based component is jsx
+  // app.js file is what finally runs on our react-application
+  // in jsx we use className instead of class we write in html
+  // camelCasing is used while writing code
+  // Everything inside {} curvy brackets is seen/resolved as js inside function component
+
+  // git
+  // push - if we want the changes that we made in files to appear on github as well
+            then we push those changes after add+commit
+
