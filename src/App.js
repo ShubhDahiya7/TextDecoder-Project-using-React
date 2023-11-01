@@ -13,7 +13,7 @@ function App() {
   // Everything inside {} curvy brackets is seen/resolved as js inside function component
   return (
       <>
-          <Navbar title="TextI" about="Aboutus"/>
+          <Navbar title="TextWeb" about="Aboutus"/>
       </>
   );
 }
