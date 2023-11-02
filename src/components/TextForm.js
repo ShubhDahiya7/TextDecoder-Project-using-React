@@ -14,6 +14,25 @@ export default function TextForm(props) {
         let newText = text.toLowerCase()
         setText(newText)
     }
+
+    const clearText = ()=> {
+        console.log("clear text is clicked")
+        let text = ""
+        setText(text)
+    }
+
+    const copyText = ()=> {
+        console.log("copied to clipboard")
+        let inputElement = document.querySelector("#mybox")
+
+        // select the input area text
+        inputElement.select();
+        inputElement.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+
+        // deselect text field after copying
+        inputElement.blur();
+    }
     const handleOnChange = (event)=> {
         console.log("on change")
         setText(event.target.value)
@@ -28,13 +47,16 @@ export default function TextForm(props) {
             <h2>{props.heading}</h2>
             <div className="mb-3">
                 {/*<label htmlFor="mybox" className="form-label">Example textarea</label>*/}
-                {/*when we try ro change textarea handle on change function is fired*/}
+                {/*when we try to change textarea handle on change function is fired*/}
                 <textarea className="form-control" id="mybox" rows="8" value={text} onChange={handleOnChange}></textarea>
             </div>
 
             {/*when we click on button then convert to uppercase function is fired*/}
             <button className="btn btn-lg btn-primary" onClick={convertToUppercase}>convert to uppercase</button>
             <button className="btn btn-lg btn-primary mx-3" onClick={convertToLowercase}>convert to lowercase</button>
+            <button className="btn btn-lg btn-primary mx-3" onClick={clearText}>clear text</button>
+            <button className="btn btn-lg btn-primary mx-3" onClick={copyText}>copy text</button>
+
         </div>
             <div className="container my-3">
                 <h2>Your Text Analysis</h2>
