@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 // when we import that component in some other component,{props.variable name}
 export default function Navbar(props) {
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/" style={{color:"white"}}>{props.title}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
