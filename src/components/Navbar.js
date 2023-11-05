@@ -8,9 +8,9 @@ import PropTypes from 'prop-types';
 // when we import that component in some other component,{props.variable name}
 export default function Navbar(props) {
     return (
-        <nav className="navbar navbar-expand-lg fixed-top">
+        <nav className={`navbar navbar-expand-lg fixed-top navbar-${props.mode} bg-${props.mode}`}>
             <div className="container-fluid">
-                <a className="navbar-brand" href="/" style={{color:"white"}}>{props.title}</a>
+                <a className="navbar-brand" href="/" >{props.title}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -27,6 +27,12 @@ export default function Navbar(props) {
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-primary" type="submit">Search</button>
                     </form>
+
+                    {/*ternary operator for light dark mode for navbar color change*/}
+                    <div className={`form-check form-switch mx-3 text-${props.mode === 'light'?'dark':'light'}`}>
+                        <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Change mode</label>
+                    </div>
                 </div>
             </div>
         </nav>

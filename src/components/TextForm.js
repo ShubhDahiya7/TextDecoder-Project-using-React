@@ -48,7 +48,7 @@ export default function TextForm(props) {
             <div className="mb-3">
                 {/*<label htmlFor="mybox" className="form-label">Example textarea</label>*/}
                 {/*when we try to change textarea handle on change function is fired*/}
-                <textarea className="form-control" id="mybox" rows="8" value={text} onChange={handleOnChange}></textarea>
+                <textarea className="form-control" style={{backgroundColor: props.mode === 'light'?'dark':'light'}} id="mybox" rows="8" value={text} onChange={handleOnChange}></textarea>
             </div>
 
             {/*when we click on button then convert to uppercase function is fired*/}
@@ -58,7 +58,7 @@ export default function TextForm(props) {
             <button className="btn btn-lg btn-primary mx-3" onClick={copyText}>copy text</button>
 
         </div>
-            <div className="container my-3">
+            <div className="container my-3" style={{Color: props.mode === 'light'?'dark':'light'}}>
                 <h2>Your Text Analysis</h2>
                 {/*text.split[" "] would give us an array which will store only words*/}
                 <p>{text.split(" ").length} words and {text.length} characters</p>
